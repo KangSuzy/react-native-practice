@@ -2,6 +2,7 @@
  
  ## DESCRIPTION
  *프로젝트에 대한 간단한 설명 기술 추후 추가 .. 리액트 네이티브 연습용 .. !*
+ * D-day count & chat
 
  ## ENVIRONMENT 
  *실행환경 기술 ( os .. 패키지버전등 .. )*
@@ -27,3 +28,10 @@
  >  - Google APIs Intel x86 Atom_64 System Image
  >  환경변수 .. 프로젝트 JDK 버전 잘 확인 .... 
  >  일단 성공한 블로그 포스팅 첨부 ....https://wpioneer.tistory.com/55
+
+---
+
+ ## Project Component
+- Setting
+- D-day
+- Chat
