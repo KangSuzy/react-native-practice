@@ -1,6 +1,6 @@
 //App.js
 import React from 'react';
-import { StyleSheet, Text, View, Image, TextInput, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, Image, TextInput, TouchableOpacity, ScrollView } from 'react-native';
 
 
 export default class App extends React.Component {
@@ -15,11 +15,19 @@ export default class App extends React.Component {
         </View>
 
         <View style={styles.ddayView}>
-        
+        <Text> 수능까지 </Text>
+        <Text> D-123 </Text>
+        <Text> 2022년 06월 21일 </Text>
         </View>
 
         <View style={styles.chatView}>
+        <ScrollView>
 
+        </ScrollView>
+        <TextInput/>
+        <TouchableOpacity>
+            <Text> SEND </Text>
+        </TouchableOpacity>
         </View>
       </View>
     );
