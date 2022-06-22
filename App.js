@@ -1,6 +1,6 @@
 //App.js
 import React from 'react';
-import { StyleSheet, Text, View, Image, TextInput, TouchableOpacity, ScrollView } from 'react-native';
+import { StyleSheet, Text, View, Image, TextInput, TouchableOpacity, ScrollView, ImageBackground } from 'react-native';
 
 
 export default class App extends React.Component {
@@ -8,6 +8,7 @@ export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
+      <ImageBackground style = {{width:'100%', height:'100%'}} source={require('./images/background.png')}>
         <View style={styles.settingView}>
         <TouchableOpacity>
         <Image source={require('./icon/setting.png')}/>
@@ -31,6 +32,7 @@ export default class App extends React.Component {
                 </TouchableOpacity>
             </View>
         </View>
+        </ImageBackground>
       </View>
     );
   }
@@ -42,20 +44,17 @@ const styles = StyleSheet.create({
     },
     settingView: {
         flex: 1,
-        backgroundColor: 'red',
         justifyContent: 'center',
         alignItems: 'flex-end',
         marginRight: '1%',
     },
     ddayView: {
         flex: 6,
-        backgroundColor: 'green',
         justifyContent: 'center',
         alignItems: 'center',
     },
     chatView: {
         flex: 6,
-        backgroundColor: 'blue',
     },
      titleText:{
         alignSelf: 'flex-end',
@@ -78,19 +77,33 @@ const styles = StyleSheet.create({
      },
      sendButton: {
         backgroundColor: 'yellow',
+        height: 40,
+        width: 50,
+        borderRadius: 20,
+        padding: 5,
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginLeft: 5
      },
      chatInput: {
         backgroundColor: 'white',
-        width: '80%',
+        width: '77%',
+        height: 40,
+        borderWidth: 1,
+        borderColor: '#a5a5a5',
+        borderRadius: 20
      },
      chatControl: {
         flexDirection : 'row',
         alignItems : 'center',
         justifyContent: 'center',
+        marginBottom: 10
      },
      chatScrollView: {
         width : '90%',
+        margin : 10,
         alignSelf : 'center',
-        backgroundColor : 'grey',
+        backgroundColor : '#D3D3D3',
+        borderRadius: 5,
      }
 });
