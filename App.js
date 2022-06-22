@@ -21,13 +21,15 @@ export default class App extends React.Component {
         </View>
 
         <View style={styles.chatView}>
-        <ScrollView>
+        <ScrollView style={styles.chatScrollView}>
 
         </ScrollView>
-        <TextInput/>
-        <TouchableOpacity>
-            <Text> SEND </Text>
-        </TouchableOpacity>
+            <View style={styles.chatControl}>
+                <TextInput style={styles.chatInput}/>
+                <TouchableOpacity style={styles.sendButton}>
+                <Text> SEND </Text>
+                </TouchableOpacity>
+            </View>
         </View>
       </View>
     );
@@ -74,4 +76,21 @@ const styles = StyleSheet.create({
         color: '#4A4A4A',
         marginLeft: '15%',
      },
+     sendButton: {
+        backgroundColor: 'yellow',
+     },
+     chatInput: {
+        backgroundColor: 'white',
+        width: '80%',
+     },
+     chatControl: {
+        flexDirection : 'row',
+        alignItems : 'center',
+        justifyContent: 'center',
+     },
+     chatScrollView: {
+        width : '90%',
+        alignSelf : 'center',
+        backgroundColor : 'grey',
+     }
 });
