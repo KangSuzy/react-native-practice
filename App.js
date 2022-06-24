@@ -1,22 +1,31 @@
 //App.js
 import React from 'react';
 import { StyleSheet, Text, View, Image, TextInput, TouchableOpacity, ScrollView, ImageBackground } from 'react-native';
-
+import Setting from './Setting.js';
 
 export default class App extends React.Component {
+  constructor(props){
+    super(props);
+    this.state = {
+        dday: new Date(),
+        ddayTitle: '테스트 디데이까지',
+        chatLog: [],
+    }
+  }
 
   render() {
     return (
       <View style={styles.container}>
-      <ImageBackground style = {{width:'100%', height:'100%'}} source={require('./images/background.png')}>
+      <ImageBackground style = {{width:'100%', height:'100%'}}
+                       source={require('./images/background.png')}>
         <View style={styles.settingView}>
-        <TouchableOpacity>
-        <Image source={require('./icon/setting.png')}/>
+        <TouchableOpacity onPress={()=>this.toggleSettingModal()}>
+            <Image source={require('./icon/setting.png')}/>
         </TouchableOpacity>
         </View>
 
         <View style={styles.ddayView}>
-        <Text style={styles.titleText}> 수능까지 </Text>
+        <Text style={styles.titleText}> {this.state.ddayTitle} </Text>
         <Text style= {styles.ddayText}> D-123 </Text>
         <Text style={styles.dateText}> 2022년 06월 21일 </Text>
         </View>
@@ -32,6 +41,7 @@ export default class App extends React.Component {
                 </TouchableOpacity>
             </View>
         </View>
+            <Setting/>
         </ImageBackground>
       </View>
     );
